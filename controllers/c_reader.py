@@ -16,7 +16,7 @@ class C_reader:
         编译markdown文件
         :return: 编译结果
         '''
-        mode = 1 # 1:开头部分 2:内容部分
+        mode = 1  # 1:开头部分 2:内容部分
         # 遍历文件行，逐行编译
         for line in open(self.file_path, 'r', encoding='utf8'):
             # 若为空行，跳过
@@ -30,8 +30,7 @@ class C_reader:
             # 编译内容部分
             elif mode == 2:
                 self.__compile_body(line)
-        # 返回ppt_data
-        return self.__ppt_data
+        return self.__ppt_data  # 返回ppt_data
     
     def __compile_head(self, line) -> bool:
         '''
